@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learnk8s-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learnk8s
+  template:
+    metadata:
+      labels:
+        app: learnk8s
+    spec:
+      containers:
+      - name: node-app
+        image: learnk8s:1.0
+        ports:
+        - containerPort: 4000
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"  
+        envFrom:
+        - configMapRef:
+            name: learnk8s-config
