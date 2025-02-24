@@ -56,6 +56,3 @@ sequenceDiagram
     E-->>A: Confirmed
     A-->>-U: 10. Success response```
 
-
-![image](https://github.com/user-attachments/assets/a938eb4c-43e0-49bb-bf38-b4c8608c6354)
-
