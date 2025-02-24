@@ -26,7 +26,8 @@ You can expose Minikube's Docker daemon with:
 eval $(minikube docker-env)
 ```
 
-```mermaidsequenceDiagram
+```mermaid
+sequenceDiagram
     participant U as User/kubectl
     participant A as API Server
     participant E as etcd
